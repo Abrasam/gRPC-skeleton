@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package = "golang.samsga.me/apis/skeleton";
+option java_package = "me.samsga.apis.skeleton";
+
+package skeleton;
+
+// The sketon service.
+service Skeleton {
+  // Ping
+  rpc Ping (PingRequest) returns (Pong);
+}
+
+message PingRequest {
+  string Message = 1;
+}
+
+message Pong {
+  string Message = 1;
+}
